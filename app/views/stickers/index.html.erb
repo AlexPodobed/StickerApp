@@ -1,0 +1,31 @@
+<h1>Listing stickers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Text</th>
+      <th>Position x</th>
+      <th>Position y</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stickers.each do |sticker| %>
+      <tr>
+        <td><%= sticker.text %></td>
+        <td><%= sticker.position_x %></td>
+        <td><%= sticker.position_y %></td>
+        <td><%= link_to 'Show', sticker %></td>
+        <td><%= link_to 'Edit', edit_sticker_path(sticker) %></td>
+        <td><%= link_to 'Destroy', sticker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sticker', new_sticker_path %>
