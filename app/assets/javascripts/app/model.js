@@ -5,6 +5,6 @@ var Stick = Backbone.Model.extend({
                 position_y:0
         },
 
-        url: "/stickers.json"
+        urlRoot: "/stickers"
 
 });
